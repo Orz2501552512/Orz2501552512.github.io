@@ -1,0 +1,90 @@
+**多学
+多问
+自己动手,调试错误
+复习和总结**
+
+---
+Xmind 用法 tab键建立下级关系,enter键建立同级关系,ctrl+enter键建立上属关系
+
+
+####1.计算机语言的概述
+软件开发 人机交互 计算机语言
+
+####2.java简介
+**1. java能够做什么?**
+***可以制作网站
+可以做android
+可以做游戏
+可以做软件
+
+
+**2.Java之所以能跨平台执行是因为**
+在windows,Linux,mac中读取不了java文件之后,得给电脑装一个各个操作系统所能执行的JVM
+然后无论是什么系统都是让JVM (Java虚拟机):解析执行Java文件
+
+
+**3.Java开发环境搭建**
+光是只有JVM是执行不了的还得有核心类库才可以执行的了
+
+JRE:Java运行环境  有这个才能保证java程序在电脑中执行 
+JRE包含了所运行时的所有文件,包含了jvm 和核心类库
+
+**Jdk:java开发工具包  **
+Jdk中就包含了jre运行环境和java的开发工具 javac.exe/jar.exe
+
+Program files(x86) 和不带x86文件的区别:x86 文件夹装的都是32位的软件
+
+```
+第一步:安装jdk
+
+在该目录下按住shift+右击出现和Linux一样的在此处打开命令行(打开终端)
+
+为啥notepad(记事本)在命令行中可以随意在哪个盘位置打开都行,而我的Java程序不行呢?
+当你写一个命令时,它会到你当前目录中找对应的程序看有没有对应的程序--->没找到--->往环境变量里(Path)找---->找到就执行对应的程序___没有就会提示没有该程序
+
+第二步:配置环境变量
+
+PATH
+在计算机属性里的高级系统设置中找到环境变量
+在path中加入我的Java所在目录
+新建用户变量--->变量名PATH 变量值:所想打开命令的软件目录
+```
+>**Java目录介绍**
+Bin --->编译器+解析+其他可执行文件
+Db--->java db数据库,供学习测试使用,开发不建议使用
+Include--->用于本地代码的头文件
+Srz.zip----->jdk类库源代码文件
+Jre--->java运行环境
+Lib--->相关类库
+
+
+>**编写第一个java程序helloworld**
+将java代码编写到扩展名为.java的文件当中
+通过javac 命令对该java文件进行编译,并生成一个扩展名为.class的文件
+通过java命令对生成的class文件进行运行(不要把.class都写进去)
+**Java代码写在class中**
+```
+class Helloworld{
+	public static void main(String[] args) {
+		System.out.print("Hello   sdaf world");
+	}
+}
+```
+
+写了java代码---->用javac 编译写好的java文件,编译成能让JVM所能识别的字节码(.class)---->java 你的字节码名称 让JVM去执行编译好的字节码---->执行结果
+
+我们生成字节码的名称他是跟class名称一样的.
+
+**Public 公共的**
+如果我们在class前添加了一个public,那么你的java文件名称必须要得跟class的名称保持一致
+
+
+**配置classPath**
+Class文件编译好了的,可以放在哪里都可以用java程序进行编译
+使用环境变量path进行添加变量的都是可执行文件(exe)
+在当地文件夹中,如果想要把这个在其他地方的class进行运行的话,必须要进行classPath的配置
+如果没有配置classPath,会自动到当前目录下寻找指定名称的字节码
+如果配置了classPath,无论在哪个目录下,都会去找配置的classPath目录下寻找指定名称的字节码
+
+Eclipse  集成开发环境
+Package  就是显示java文件放在哪个文件包里面
