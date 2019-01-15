@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      JavaWeb基础入门
+subtitle:   JavaWeb
+date:       2018-11-30
+author:     吴智斌
+header-img: img/post-bg-ios9-web.jpg
+catalog: 	 true
+tags:
+    - Java
+    - Web
+---
+
 **多学
 多问
 自己动手,调试错误
